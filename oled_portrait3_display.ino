@@ -16,7 +16,6 @@ static const uint8_t PIN_JOY_BTN = 2;
 // ───────────────────────────────────────────────────────────────
 // CONFIGURATION
 // ───────────────────────────────────────────────────────────────
-static const uint8_t TOTAL_TRACKS = 86;
 static const uint8_t DEFAULT_VOLUME = 15;
 static const uint8_t MAX_VOLUME = 30;
 static const uint8_t MIN_VOLUME = 0;
@@ -143,7 +142,7 @@ const char s84[] PROGMEM = "Laufey|Let You Break My Heart";
 const char s85[] PROGMEM = "Steve Lacy|Bad Habit";
 const char s86[] PROGMEM = "Eyedress & Dent May|Something About You";
 
-const char* const songTable[TOTAL_TRACKS] PROGMEM = {
+const char* const songTable[] PROGMEM = {
   s01,s02,s03,s04,s05,s06,s07,s08,s09,s10,
   s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,
   s21,s22,s23,s24,s25,s26,s27,s28,s29,s30,
@@ -154,6 +153,8 @@ const char* const songTable[TOTAL_TRACKS] PROGMEM = {
   s71,s72,s73,s74,s75,s76,s77,s78,s79,s80,
   s81,s82,s83,s84,s85,s86
 };
+
+static const uint8_t TOTAL_TRACKS = sizeof(songTable) / sizeof(songTable[0]);
 
 // ───────────────────────────────────────────────────────────────
 // EQUALISER ANIMATION FRAMES
