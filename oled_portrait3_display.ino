@@ -12,6 +12,7 @@ static const uint8_t PIN_ARDUINO_TX = 10;
 static const uint8_t PIN_JOY_X = A0;
 static const uint8_t PIN_JOY_Y = A1;
 static const uint8_t PIN_JOY_BTN = 2;
+int not_of_use;
 
 // ───────────────────────────────────────────────────────────────
 // CONFIGURATION
@@ -796,3 +797,4 @@ void loop()
 
   drawDisplay();
 }
+// End of file
